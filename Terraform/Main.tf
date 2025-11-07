@@ -68,7 +68,7 @@ resource "aws_security_group" "web_sg" {
 }
 resource "aws_key_pair" "demo_key" {
   key_name   = "mini-project-key"
-  public_key = file("~/.ssh/id_rsa.pub")
+  public_key = file("C:/Users/Shiva/.ssh/id_rsa.pub")
 }
 resource "aws_instance" "web" {
   ami                    = "ami-0c02fb55956c7d316" # Ubuntu 20.04
@@ -79,8 +79,6 @@ resource "aws_instance" "web" {
   associate_public_ip_address = true
   tags = { Name = "mini-project-ec2" }
 }
-
-
 
 
 
